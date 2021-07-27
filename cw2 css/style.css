@@ -13,13 +13,14 @@ h1{
 }
 
 .parent div{
-    background-color: salmon;
+    background-color: red;
     border: 5px dashed blue
     width: 20%;
 }
 
 
 .parent div img{
+    background-color: yellow;
     width: 100%;
 }
 .content{
@@ -32,6 +33,7 @@ h1{
     border:2px dashed blue
 }
 .content img{
+    background-color: slategray;
     width: 100;
 }
 .content .desc{
@@ -40,7 +42,7 @@ h1{
     margin: 2%;
 }
 .footer{
-    background-color: snow;
+    background-color: pink;
     border: 2px dashed red;
     margin-top: 2%;
     padding: 3% 2%;

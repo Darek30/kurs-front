@@ -33,12 +33,12 @@ h1{
     width: 100;
 }
 .content .desc{
-    padding: 3%;
+    padding: 2%;
     margin: 2%;
 }
 >footer{
     border: 2px dashed red;
     margin-top: 2%;
-    padding: 5% 2%;
+    padding: 3% 2%;
     text-align: right;
 }

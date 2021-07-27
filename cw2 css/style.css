@@ -4,3 +4,21 @@ body{
 h1{
     color:red;
 }
+
+.parent{
+    border:2px dashed red;
+    display:flex;
+ justify-content: space-evenly;  
+}
+
+.parent{
+    border: 5px dashed blue
+    width: 20%;
+
+}
+
+
+
+.parent div img{
+    width: 100%;
+}

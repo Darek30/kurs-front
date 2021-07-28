@@ -22,7 +22,7 @@ body{
     background-position: 0 -200px;
 }
 .logo:active{
-    background-position: 0 -400;}
+    background-position: 0 -400px;}
 .buttons{
     display: flex;
     justify-content: space-between;

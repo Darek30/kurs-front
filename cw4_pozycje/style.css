@@ -1,0 +1,40 @@
+body div{
+    border: 2px dashed green;
+    box-sizing: border-box ;
+}
+.static{
+    position: static;
+    background-color: yellow;
+}
+.fixed{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: indigo;
+}
+.sticky{
+    position: sticky;
+    top: 10px;
+    background-color: tomato;
+    z-index: 1;
+}
+.relative{
+    position: relative;
+    border: 4px dashed grey;
+    height: 25vh;
+    background-color: ivory;
+
+}
+.absolute{
+    position: absolute;
+    right: 2;
+    bottom: 2;
+    background-color: hotpink;
+}
+.media{
+    display: flex;
+}
+ @media(max width:550px)
+{media{display: block;}
+}

@@ -1,0 +1,46 @@
+body{
+    background-color: blueviolet;
+}
+a{
+    
+    background-color: rosybrown;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+a b{ font-size: 0.5em;}
+.grid{
+    display: grid;
+    grid-template-areas: 
+    "a1 a2 a3"
+    "a4 a5 a3"
+    ;
+    gap: 10px;
+    min-height: 70vh;
+}
+.grid a:nth-child(1){grid-area: a1;}
+.grid a:nth-child(1){grid-area: a2;}
+.grid a:nth-child(1){grid-area: a3;}
+.grid a:nth-child(1){grid-area: a4;}
+.grid a:nth-child(1){grid-area: a5;}
+
+@media(max-width:720px){
+    .grid{display: block;}
+    .grid a{
+        min-height: 40vw;
+        margin-bottom: 10px;
+    }
+}
+
+.footer{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    width: 100%;
+    align-items: right;
+    
+}

@@ -56,7 +56,7 @@ body{
 
 }
 .flexContainer div div{
-    border: 2px dashed red;
+    
     background-size: 100%;
     position: absolute;
     margin: 0;

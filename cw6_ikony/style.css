@@ -22,10 +22,10 @@ a b{ font-size: 0.5em;}
     min-height: 70vh;
 }
 .grid a:nth-child(1){grid-area: a1;}
-.grid a:nth-child(1){grid-area: a2;}
-.grid a:nth-child(1){grid-area: a3;}
-.grid a:nth-child(1){grid-area: a4;}
-.grid a:nth-child(1){grid-area: a5;}
+.grid a:nth-child(2){grid-area: a2;}
+.grid a:nth-child(3){grid-area: a3;}
+.grid a:nth-child(4){grid-area: a4;}
+.grid a:nth-child(5){grid-area: a5;}
 
 @media(max-width:720px){
     .grid{display: block;}
@@ -41,6 +41,7 @@ a b{ font-size: 0.5em;}
     bottom: 0;
     background-color: red;
     width: 100%;
-    align-items: right;
+    text-align: right;
+    margin-right: 2mm;
     
 }

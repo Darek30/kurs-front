@@ -1,19 +1,26 @@
 body{
-    background-image:url("../img/criss-cross.png");
+    background-image: url("criss-cross/criss-cross.png");
     }
-    ul, li, ol{
+ul, li, ol{
         list-style-type: none;
         padding: 0;
         margin: 0%;
     }
-    ol{ display: none;}
+ol{ display: none;}
 
-    li:hover ol{display: block;}
-    ul{
+li:hover ol{display: block;}
+ul{
         display: flex;
         justify-content: space-between;
         background-color: whitesmoke;
     }
+
+header{
+    align-items: center;
+    padding: 2%;
+    margin-top: 1%;
+}
+
 ul>li{
     flex: 1;
     text-align: center;
@@ -49,11 +56,12 @@ p{background-color:rgb(159, 168, 144);
     border-radius: 3%;
 }
 
-
+.img{
+    max-width: 100%;
+}
 .footer{
     display: flex;
     justify-content: center;
-    background-color: chartreuse;
     color: cornsilk;
 }
 
@@ -73,7 +81,7 @@ p{background-color:rgb(159, 168, 144);
 
 
 @media(max-width:720px){
-    .grid{display: block;}
+    .content{display: block;}
     .grid a{
         min-height: 40vw;
         margin-bottom: 10px;

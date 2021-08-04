@@ -1,0 +1,81 @@
+body{
+    background-image:url("../img/criss-cross.png");
+    }
+    ul, li, ol{
+        list-style-type: none;
+        padding: 0;
+        margin: 0%;
+    }
+    ol{ display: none;}
+
+    li:hover ol{display: block;}
+    ul{
+        display: flex;
+        justify-content: space-between;
+        background-color: whitesmoke;
+    }
+ul>li{
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+ol{
+    position: absolute;
+    width: 100%;
+    background-color: thistle;
+}
+ul{
+    position:sticky;
+    top: 0;    
+    padding: 0 2%;
+    z-index: 1;
+}
+.content{
+    display: flex;
+}
+.content.left{
+    flex: 4;
+}
+.content.right{
+    flex: 1;
+    padding: 1%;
+}
+.content.left img{max-width: 50%;}
+
+h3{margin-bottom: 0;
+color: brown;
+}
+p{background-color:rgb(159, 168, 144);
+    border-radius: 3%;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: chartreuse;
+    color: cornsilk;
+}
+
+.footer.grid{
+    display: grid;
+    grid-template-areas: 
+    "a1 a2 a3 a4";
+    gap: 10px;
+    min-height: 70vh;
+}
+
+
+.grid a:nth-child(1){grid-area: a1;}
+.grid a:nth-child(2){grid-area: a2;}
+.grid a:nth-child(3){grid-area: a3;}
+.grid a:nth-child(4){grid-area: a4;}
+
+
+@media(max-width:720px){
+    .grid{display: block;}
+    .grid a{
+        min-height: 40vw;
+        margin-bottom: 10px;
+    }
+}

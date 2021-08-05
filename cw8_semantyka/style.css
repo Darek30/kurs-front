@@ -1,0 +1,33 @@
+*{box-sizing: border-box;}
+
+body{
+    background-color: rgb(171, 211, 171);
+    margin: 0;
+}
+body > header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2%;
+    background-color:rgba(255, 255, 255, 0.719);
+    position:sticky;
+    top:0;
+  }
+body > header > *{
+    flex:1;
+}
+body > header > a > h1{
+    display:flex;
+}
+body > header > nav > ul {
+    padding:0;
+    list-style-type: none;
+    display:flex;
+    justify-content: flex-end;
+    gap:2%;
+    margin:0;
+}
+body > header > nav > ul > li{
+    padding:2%;
+    cursor:pointer;
+}

@@ -1,29 +1,105 @@
 *{box-sizing: border-box;}
 
 %centered{
-    display:flex;
-    justify-content: center;
-    align-items: center;}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+$txt-color:rgba(8, 8, 114, 0.815);
+$borderSize:1,5px;
+$border:ridge;
+$bgColor:rgb(224, 180, 99);
+$borderColor:rgba(66, 7, 7, 0.87);
 
+@mixin media($pgW, $w) {
+  @media (min-width:$pgW){
+    body{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      >section,>main{
+        width:$w;
+      }
+      >header,footer{
+        width:100%;
+      }
+    }
+  }    
+}
 body{
-    background-color: rgba(0, 168, 112, 0.616);
-    margin: 0;
+  margin: 0;
+  background-color: $bgColor;
+  >header{
+    border: $border $borderColor $borderSize;
+    text-align: center;
+    background-color: blanchedalmond;
+    color: $txt-color;
+  }
+  img{
+    max-height: 100%;
+    max-width: 100%;
+  }
+  >section{
+    display: flex;
+    border: $border $borderColor $borderSize;
+    min-height: 30vh;
+    background-color: rgba(73, 9, 73, 0.37);
+    &:nth-child(2){
+      flex-direction: row-reverse;
+    }
     header{
-    
-        background-color:yellow;
-        text-align: center;
-        color: red
+
+      background-color:rgba(73, 9, 73, 0.37);
+      flex:2 1;
+      @extend %centered;
+      img{
+        max-height: 70%;
+        max-width:70%;
+        
+      }
+    }
+    article{
+      flex-direction: column;
+      flex: 2;
+      @extend %centered;
+      color: $txt-color;
+      padding: 2%;
+    }
+}
+  main{
+    gap: 2px;
+    border: $borderSize $borderColor $border;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    div{
+      border: $border $borderColor $borderSize;
+      padding: 4%;
+      margin-top: 1%;
+      height: 30vh;
+      @extend %centered;}
+      @for $i from 1 to 7{
+        div:nth-child(#{$i}){background-color: lighten( #fc050525, 16*$i);}
+      }
+    }
+  footer{
+    display: flex;
+    padding: auto;
+    justify-content: center;
+    color: $txt-color;
+    border: $bgColor $borderColor $borderSize;
+    background-color: $borderColor;
+    a{
+      text-decoration: none;
+      color: inherit;
+      margin: 1%;
+      padding: 0 2%;
+      border: $bgColor $borderColor $borderSize;
 
     }
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-}  
+@include media(770px,80%);
+@include media(1100px,60%);
+@include media(1500px,40%);

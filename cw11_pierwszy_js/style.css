@@ -1,0 +1,50 @@
+body{
+    background-color: chartreuse;
+}
+h1{
+    color:red;
+    text-align: center;
+}
+
+.parent{
+   
+    display:flex;
+    justify-content: space-evenly;  
+}
+
+.parent div{
+   
+    border: 5px outset;
+    width:20%;
+}
+
+
+.parent div img{
+    background-color: yellow;
+    width: 100%;
+}
+.content{
+    
+    display: flex;
+    justify-content:center;
+    margin-top: 2%;
+}
+.content div{
+    border:ridge
+}
+.content img{
+    background-color: slategray;
+    width: 100;
+}
+.content .desc{
+    background-color: teal;
+    padding: 2%;
+    margin: 2%;
+}
+.footer{
+    background-color: pink;
+    border: 2px groove red;
+    margin-top: 2%;
+    padding: 3% 2%;
+    text-align: right;
+}

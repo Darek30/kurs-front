@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameJS</title>
+    <style>
+    *{box-sizing:border-box;}
+
+    body{margin:0;}
+    
+    .gamePlane{
+    border:2px dashed red;
+    width:80vw;
+    height:80vh;
+    margin:10vh 10vw;
+    position:relative;
+    }
+    .gamePlane div{
+        position: absolute;
+    }
+    .wall{
+    background-color:red;}
+    .start{
+        background-color: aqua;
+    }
+    .meta{
+        background-color: chartreuse;
+    }
+
+    </style>
+</head>
+<body>
+    
+    <div class="gamePlane"></div>
+    
+    <script>
+        function makeWall(w,h,x,y,type="wall"){
+
+            const wall = document.createElement("div");
+            wall.className = type;
+            wall.style.width = w +"vw";
+            wall.style.height = h + "vh";
+            wall.style.marginLeft= x +"vw";
+            wall.style.marginTop = y +"vh";
+            const gamePlane = document.querySelector(".gamePlane");
+            gamePlane.append(wall);
+        }
+        
+    
+        const stage=[
+        [10,10,0,0,"start"],
+        [20,5,0,0],
+        [15,5,0,10],
+        [5,25,10,10],
+        [5,25,20,0],
+        [30,5,10,30],
+        [20,5,20,20],
+        [10,5,30,25,"meta"]
+       
+        
+        ]
+        for( const w of stage){
+            makeWall(w[0],w[1],w[2],w[3],w[4]);
+        }
+        const game ={
+            gamePlane:document.querySelector(".gamePlane"),
+            buttons:{},
+            initButtons(){
+                this.buttons.start= this.gamePlane.querySelector("start")
+                this.buttons.meta= this.gamePlane.querySelector("meta")
+            },
+
+
+
+            init(){
+            makeStage(stage);
+            this.initButtons();
+            this.buttons.start.onclick=()=> {this.start()};
+
+        },
+            start(){
+                this.buttons.start.onclick=()=> {};
+                this.buttons.meta.onmouseover=()=> {this.end};
+
+            },
+            end(){
+                this.buttons.meta.onmouseover=()=> {};
+                this.buttons.start.onclick=()=> {this.start()};
+
+            }
+
+        }
+    
+    
+    </script>
+    
+</body>
+</html>

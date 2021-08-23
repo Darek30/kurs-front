@@ -50,7 +50,7 @@
         
     
         const stage=[
-        [10,10,0,0,"start"],
+        [5,10,0,0,"start"],
         [20,5,0,0],
         [15,5,0,10],
         [5,25,10,10],
@@ -68,8 +68,8 @@
             gamePlane:document.querySelector(".gamePlane"),
             buttons:{},
             initButtons(){
-                this.buttons.start= this.gamePlane.querySelector("start")
-                this.buttons.meta= this.gamePlane.querySelector("meta")
+                this.buttons.start= this.gamePlane.querySelector(".start")
+                this.buttons.meta= this.gamePlane.querySelector(".meta")
             },
 
 
@@ -82,12 +82,15 @@
         },
             start(){
                 this.buttons.start.onclick=()=> {};
+                this.buttons.walls(() => {game.end(false)});
                 this.buttons.meta.onmouseover=()=> {this.end};
+                console.log("Start Gry")
 
             },
             end(){
                 this.buttons.meta.onmouseover=()=> {};
                 this.buttons.start.onclick=()=> {this.start()};
+                console.log("Koniec Gry")
 
             }
 
